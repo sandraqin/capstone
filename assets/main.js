@@ -1,3 +1,8 @@
+window.stateCallback = () => {
+	console.log('Something changed!')
+}
+
+
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -18,4 +23,7 @@ function myFunction() {
     }
   }
 
-
+window.stateCallback = () => {
+  let selectElement = document.querySelector('[name="some-option"]');
+  console.log(select.Element.value);
+}

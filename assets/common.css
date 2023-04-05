@@ -41,7 +41,8 @@ a{
 .dropdown{
   position: absolute;
   margin: calc(var(--base));
-  margin-top:calc(var(--base) * 2);
+  margin-top:calc(var(--base) * 1.5);
+
   
 }
 
@@ -54,9 +55,9 @@ a{
     min-width:70vw;
 
 
-    font-size: 20px;
+    font-size: 16px;
     font-family: "roboto slab";
-    border-radius: 50px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
   }
@@ -94,16 +95,18 @@ a{
     flex-direction: column;
 
     border:white 2px;
-    border-radius: 20px;
+    border-radius: 8px;
     border-style: solid;
     background-color: #cecece;
-    min-width:70vw;
+    min-width:69vw;
     text-decoration: none;
     color:rgb(0, 0, 0,60%);
    
-    padding-top:10px;
-    padding-bottom:10px;
+    padding-top:8px;
+    padding-bottom:8px;
     align-items: flex-start;
+
+    margin-top:-1px;
   }
 
   a:hover{
@@ -111,7 +114,8 @@ a{
     color: rgb(0, 0, 0);
   }
 
-  .down img{
+  .down{
+    padding-top:1px;
     opacity:50%;
   }
 
@@ -123,6 +127,21 @@ a{
     filter:blur(0.5px);
   }
 
+
+
+
+
+
+  section{
+    display:flex;
+    flex-direction: row;
+
+    margin-left: calc(var(--base) * 2);
+    margin-top: calc(var(--base) * 2);
+    gap:20px;
+  }
+
+
   .bucket{
     position: fixed;
 
@@ -131,7 +150,7 @@ a{
     height:auto;
 
     margin-right: -40vw;
-    margin-bottom:-20vw;
+    margin-bottom:-40vh;
 
     right:0;
     bottom:0;
@@ -166,6 +185,8 @@ a{
 
   font-size:12px;
   font-weight: 800;
+
+  cursor:pointer;
 
 }
 
@@ -256,31 +277,25 @@ a{
   display:flex;
 }
 
-.data.active{
-  display:flex;
-}
+
 
 .enterblock{
   display:flex;
-  flex-direction: row;
-  align-items: flex-end;
-  position:fixed;
+  flex-direction: column;
+  align-items: center;
 
   border-radius:10px;
   min-height:10vh;
   background-color:#EDEDED;
 
-  margin-left:calc(var(--base) * 2);
-  margin-top: calc(var(--base) * 2);
 
-
-  font-size:13px;
+  font-size:12px;
 }
 
 .clothes{
   height:10vh;
   padding:20px;
-  padding-right:0;
+  padding-bottom:0;
   opacity:50%;
   
 }
@@ -300,20 +315,24 @@ input{
   border:none;
   border-bottom:1.5px solid #cecece;
   background-color:#EDEDED;
-  width:5vw;
+  width:10vw;
+
+  font-family: "roboto slab";
+
+
 }
 
 .enter{
   height:5vh;
-  padding:20px;
-  padding-left:0px;
-  padding-right:10px;
-
+  padding-bottom:5px;
+  padding-top:5px;
+ 
   position: relative;
   right:0;
   bottom:0;
   opacity:50%;
   filter: drop-shadow(1px 1px 1px #464646);
+  color:#EDEDED;
   
 }
 
@@ -325,22 +344,21 @@ input{
 
 .tip{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 
 
-  border-radius:10vh;
-  height:10vh;
+  border-radius:10px;
+  height:26vh;
+  width:34vw;
   background-color:#6A6A6A;
 
-  margin-left:calc(var(--base) * 1.8);
-  margin-top: calc(var(--base) * 11);
 }
 
 .sorticon{
-  height:11vh;
-  margin:-4px;
-  padding:0;
+  height:8vh;
+  padding:5px;
+  padding-bottom:10px;
 }
 
 .tipcaption{
@@ -348,20 +366,53 @@ input{
   font-size:12px;
   font-weight:400;
   letter-spacing: 0.3px;
-  width:30vw;
-  padding-left:20px;
-  padding-right:20px;
+  padding-left:8px;
+  padding-right:8px;
+  line-height: 110%;
+
+  text-align: center;
 
 }
 
+button{
+  border:none;
+}
 
+.enterbtn{
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  padding-bottom:5px;
+  padding-right:10px;
+  align-items: center;
 
+  font-family: "roboto slab";
+  font-size:11px;
+  color:#6A6A6A;
+  cursor:pointer;
+}
+
+form{
+  display:flex;
+  flex-direction:row;
+  gap:20px;
+
+}
+
+#color-option{
+  border:none;
+  border-bottom:1.5px solid #cecece;
+  background-color:#EDEDED;
+  width:14vw;
+  font-family: "roboto slab";
+  font-size:11px;
+}
 
 
 
 @media(min-width: 600px) {
   .bucket{
-    width:50vw;
+    width:45vw;
     margin-right: -10vw;
     margin-bottom:-30vw;
  
@@ -397,5 +448,39 @@ input{
   
   }
   
+  .tip{
+    height:27vh;
+    width:18vw;
+  }
+
+
+  .sorticon{
+    height:8vh;
+    padding:5px;
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+
+
+  input{
+    width:8vw;
+  }
+
+  #color-option{
+    width:10vw;
+  }
+
+
+  .rdbutton{
+    transform:scale(0.8);
+
+    margin-left: calc(var(--base) * 1.);
+    margin-bottom: calc(var(--base)*0.8);
+
+
+  }
+
+
 
 }
+

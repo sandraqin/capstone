@@ -41,6 +41,7 @@
 
   font-size:12px;
   opacity:70%;
+  font-weight: 400;
 
 
 }
@@ -129,6 +130,7 @@
 
 }
 
+
 @media(min-width: 600px) {
     .washer{
       width:80vw;
@@ -164,5 +166,14 @@
         margin-right:-70px;
         font-size:18px;
       
+      }
+
+      .rdbutton{
+        transform:scale(0.8);
+    
+        margin-left: calc(var(--base) * 1.);
+        margin-bottom: calc(var(--base)*0.8);
+    
+    
       }
   }

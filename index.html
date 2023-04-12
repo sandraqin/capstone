@@ -15,11 +15,12 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Choose Clothes<img src="assets/down.png" alt="down" width="20" height="20" class="down"> </button>
         <div id="myDropdown" class="dropdown-content">
-          <a class="choice" href="#1"> &nbsp Sweater</a>
-          <a class="choice" href="#2"> &nbsp Shirt</a>
-          <a class="choice" href="#3"> &nbsp Pants</a>
-          <a class="choice" href="#4"> &nbsp Coat</a>
-          <a class="choice" href="#5"> &nbsp Puffer Jacket</a>
+          <input type="button" class="choice" value="Vest" onclick="showDiv()" />
+          <input type="button" class="choice" value="Shirt" onclick="showDivshirt()" />
+          <input type="button" class="choice" value="Pants" onclick="showDiv()" />
+          <input type="button" class="choice" value="Coat" onclick="showDiv()" />
+          <input type="button" class="choice" value="Puffer Jacket" onclick="showDiv()" />
+          
         </div>
       </div>
   </div>
@@ -30,9 +31,9 @@
   </div>
 
 <section>
-  <form>
+  <form action="" method="post"  onsubmit="return false">
     
-    <div class="enterblock">
+    <div class="enterblock" id="vest">
         <div class="icon">
           <img class="clothes" src="assets/vest.png" alt="vest">
         </div>
@@ -67,24 +68,87 @@
           </div>
           
     </div>
-      
-        <button class="enterbtn">
+        
+        <button class="enterbtn" onClick="showDivtip()">
           Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
         </button>
       </div>
 
   </form>
 
-  <div class="tip">
+  <div class="tip" id="tip1">
     <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
     <div class="tipcaption">Don't put it with white clothes. Sort it with clothes in other dark colors.
     </div>
   </div>
 
+
+
+
+  <form action="" method="post"  onsubmit="return false">
+  <div class="enterblock" id="shirt">
+        <div class="icon">
+          <img class="clothes" src="assets/vest.png" alt="vest">
+        </div>
+
+        <div class="material">
+          
+          <div class="form">
+            <label for = "cotton">Cotton: &nbsp</label>
+            <input id="cotton" name="some-text" placeholder="<100" required type="number">%
+          </div>
+
+          <div class="form">
+            <label for = "poly">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+          </div>
+
+          <div class="form">
+            <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+          </div>
+
+          <div class="form">
+            <label for="color-option">Color:</label>
+             <select id="color-option" name="some-option">
+                <option>Red</option>
+                <option>Blue</option>
+                <option>White</option>
+                <option>Black</option>
+                <option>Beige</option>
+                <option>Brown</option>
+                <option>Green</option>
+                <option>LightColor</option>
+              </select>
+          </div>
+          
+    </div>
+        
+        <button class="enterbtn" onClick="showDivtip()">
+          Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
+        </button>
+      </div>
+
+  </form>
+
+  <div class="tip" id="tip2">
+    <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+    <div class="tipcaption">Don't put it with white clothes. Sort it with clothes in other dark colors.
+    </div>
+  </div>
+
+
 </section>
 
   
    
+
+
+
+
+
+
+
+
+
 
  
   <div class="rdbutton">

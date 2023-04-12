@@ -90,7 +90,7 @@ a{
     flex-direction: column;
     }
 
-  a.choice{
+  input.choice{
     display: flex;
     flex-direction: column;
 
@@ -134,9 +134,10 @@ a{
 
   section{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    margin-left: calc(var(--base) * 2);
+    margin-left: calc(var(--base) );
+    margin-right: calc(var(--base));
     margin-top: calc(var(--base) * 2);
     gap:20px;
   }
@@ -146,11 +147,11 @@ a{
     position: fixed;
 
     display:block;
-    width:80vw;
+    width:75vw;
     height:auto;
 
-    margin-right: -40vw;
-    margin-bottom:-40vh;
+    margin-right: -30vw;
+    margin-bottom:-25vh;
 
     right:0;
     bottom:0;
@@ -280,9 +281,10 @@ a{
 
 
 .enterblock{
-  display:flex;
-  flex-direction: column;
+  display:none;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 
   border-radius:10px;
   min-height:10vh;
@@ -293,8 +295,10 @@ a{
 }
 
 .clothes{
-  height:10vh;
-  padding:20px;
+  height:8vh;
+  padding-left:30px;
+  padding-right:0;
+  padding-top:0;
   padding-bottom:0;
   opacity:50%;
   
@@ -343,14 +347,12 @@ input{
 
 
 .tip{
-  display:flex;
-  flex-direction: column;
+  display:none;
+  flex-direction: row;
   align-items: center;
 
 
   border-radius:10px;
-  height:26vh;
-  width:34vw;
   background-color:#6A6A6A;
 
 }
@@ -358,7 +360,7 @@ input{
 .sorticon{
   height:8vh;
   padding:5px;
-  padding-bottom:10px;
+
 }
 
 .tipcaption{
@@ -393,8 +395,7 @@ button{
 }
 
 form{
-  display:flex;
-  flex-direction:row;
+
   gap:20px;
 
 }
@@ -410,7 +411,18 @@ form{
 
 
 
-@media(min-width: 600px) {
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 550px) {
   .bucket{
     width:45vw;
     margin-right: -10vw;
@@ -426,6 +438,8 @@ form{
     height:150px;
   }
 
+
+  
   .top{
     left:30%;
     margin-top:-30px;
@@ -441,7 +455,7 @@ form{
   
   
   .last{
-
+    
     top:44%;
     margin-right:-70px;
     font-size:18px;
@@ -482,5 +496,112 @@ form{
 
 
 
+
+
+.sort{
+  display:block;
+
+  opacity:100%;
+
+  background-color:black;
+  width:3px;
+  height:10px;
+
+  position:absolute;
+  left:50%;
+
+
+  }
+  
+
+
+
+.wash{
+  display:block;
+
+  transform:rotate(-45deg);
+  opacity:50%;
+
+  background-color:black;
+  width:10px;
+  height:3px;
+
+  position:absolute;
+  top:20%;
+  right:11%;
+  }
+
+.dry{
+  display:block;
+
+  opacity:50%;
+
+  background-color:black;
+  width:10px;
+  height:3px;
+
+  position:absolute;
+  top:50%;
+  right:0;
+
 }
+
+  
+.top:hover,
+.mid:hover,
+.last:hover{
+  opacity:100%;
+  font-weight: 800;
+
+}
+
+section{
+  display:flex;
+  flex-direction: row;
+
+  margin-left: calc(var(--base) * 2);
+  margin-top: calc(var(--base) * 2);
+  gap:20px;
+}
+
+.enterblock{
+  display:none;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius:10px;
+  min-height:10vh;
+  background-color:#EDEDED;
+
+
+  font-size:12px;
+}
+
+.clothes{
+  height:10vh;
+  padding:20px;
+  padding-bottom:0;
+  opacity:50%;
+  
+}
+
+.tip{
+
+  flex-direction: column;
+
+  height:32vh;
+  width:15vw;
+
+}
+
+}
+
+
+@media(min-width: 400px) {
+  .bucket{
+    width:45vw;
+    margin-right: -10vw;
+    margin-bottom:-20vw;
+ 
+  }
 

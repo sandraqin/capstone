@@ -15,27 +15,25 @@
     <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">Choose Clothes<img src="assets/down.png" alt="down" width="20" height="20" class="down"> </button>
         <div id="myDropdown" class="dropdown-content">
-          <input type="button" class="choice" value="Vest" onclick="showDiv()" />
           <input type="button" class="choice" value="Shirt" onclick="showDivshirt()" />
-          <input type="button" class="choice" value="Pants" onclick="showDiv()" />
-          <input type="button" class="choice" value="Coat" onclick="showDiv()" />
-          <input type="button" class="choice" value="Puffer Jacket" onclick="showDiv()" />
+          <input type="button" class="choice" value="Pants" onclick="showDivpants()" />
+          <input type="button" class="choice" value="Coat" onclick="showDivcoat()" />
+
+          <input type="button" class="choice" value="Sweater" onclick="showDivsweater()" />
           
         </div>
       </div>
   </div>
   
   <hr>
-  <div class="corner">
-    <img class="bucket" src="assets/bucket.png" alt="sorting">
-  </div>
+ 
 
 <section>
-  <form action="" method="post"  onsubmit="return false">
+  <form class="shirt" action="" method="post"  onsubmit="return false">
     
-    <div class="enterblock" id="vest">
+    <div class="enterblock" id="shirt">
         <div class="icon">
-          <img class="clothes" src="assets/vest.png" alt="vest">
+          <img class="clothes" src="assets/shirt.png" alt="shirt">
         </div>
 
         <div class="material">
@@ -69,26 +67,20 @@
           
     </div>
         
-        <button class="enterbtn" onClick="showDivtip()">
+    <button class="enterbtn" id="submitbtn">
+
           Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
         </button>
       </div>
 
   </form>
 
-  <div class="tip" id="tip1">
-    <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
-    <div class="tipcaption">Don't put it with white clothes. Sort it with clothes in other dark colors.
-    </div>
-  </div>
 
 
-
-
-  <form action="" method="post"  onsubmit="return false">
-  <div class="enterblock" id="shirt">
+  <form class="pants" action="" method="post"  onsubmit="return false">
+  <div class="enterblock" id="pants">
         <div class="icon">
-          <img class="clothes" src="assets/vest.png" alt="vest">
+          <img class="clothes" src="assets/pant.png" alt="pants">
         </div>
 
         <div class="material">
@@ -122,24 +114,158 @@
           
     </div>
         
-        <button class="enterbtn" onClick="showDivtip()">
+        <button class="enterbtn" id="submitbtn">
+
           Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
         </button>
       </div>
 
   </form>
 
-  <div class="tip" id="tip2">
-    <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
-    <div class="tipcaption">Don't put it with white clothes. Sort it with clothes in other dark colors.
+
+
+
+
+<form class="coat" action="" method="post"  onsubmit="return false">
+  <div class="enterblock" id="coat">
+    <div class="icon">
+      <img class="clothes" src="assets/coat.png" alt="shirt">
     </div>
+
+    <div class="material">
+      
+      <div class="form">
+        <label for = "cotton">Cotton: &nbsp</label>
+        <input id="cotton" name="some-text" placeholder="<100" required type="number">%
+      </div>
+
+      <div class="form">
+        <label for = "poly">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+      </div>
+
+      <div class="form">
+        <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+      </div>
+
+      <div class="form">
+        <label for="color-option">Color:</label>
+         <select id="color-option" name="some-option">
+            <option>Red</option>
+            <option>Blue</option>
+            <option>White</option>
+            <option>Black</option>
+            <option>Beige</option>
+            <option>Brown</option>
+            <option>Green</option>
+            <option>LightColor</option>
+          </select>
+      </div>
+      
+</div>
+    
+    <button class="enterbtn" id="submitbtn">
+
+          Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
+        </button>
+      </div>
+
+</form>
+
+
+
+
+
+<form class="sweater" action="" method="post"  onsubmit="return false">
+<div class="enterblock" id="sweater">
+  <div class="icon">
+    <img class="clothes" src="assets/sweater.png" alt="sweater">
   </div>
+
+  <div class="material">
+    
+    <div class="form">
+      <label for = "cotton">Cotton: &nbsp</label>
+      <input id="cotton" name="some-text" placeholder="<100" required type="number">%
+    </div>
+
+    <div class="form">
+      <label for = "poly">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+    </div>
+
+    <div class="form">
+      <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+    </div>
+
+    <div class="form">
+      <label for="color-option">Color:</label>
+       <select id="color-option" name="some-option">
+          <option>Red</option>
+          <option>Blue</option>
+          <option>White</option>
+          <option>Black</option>
+          <option>Beige</option>
+          <option>Brown</option>
+          <option>Green</option>
+          <option>LightColor</option>
+        </select>
+    </div>
+    
+</div>
+  
+  <button class="enterbtn" id="submitbtn">
+
+          Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
+        </button>
+      </div>
+</div>
+
+</form>
+
+
+
+<div class="tip" id="tip1">
+  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+  <div class="tipcaption">Sort the clothes by dark colors, not with light clothes.
+  </div>
+</div>
+
+<div class="tip" id="tip2">
+  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="light"></div>
+  <div class="tipcaption">Sort with light color clothes need to be wrote later
+  </div>
+</div>
+
+<div class="tip" id="tip3">
+  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+  <div class="tipcaption">Wash blahblahblah.
+  </div>
+</div>
+
+<div class="tip" id="tip4">
+  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+  <div class="tipcaption">Cold wash lalalalal.
+  </div>
+</div>
+
+
+<div class="tip" id="tip5">
+  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+  <div class="tipcaption">Dry blahblahblah.
+  </div>
+</div>
+
+<div class="tip" id="tip6">
+  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+  <div class="tipcaption">Dry drydry lalalalal.
+  </div>
+</div>
+
+
+
 
 
 </section>
 
-  
-   
 
 
 
@@ -148,28 +274,44 @@
 
 
 
+<div class="othercontrols" >
+  <div class="corner" id="sortpic">
+  <img class="bucket" src="assets/bucket.png" alt="sorting">
+  </div>
+
+  <div class="washpic" id="washpic">
+    <img class="washer" src="assets/washingmachine.png" alt="washing">
+   </div>
+
+  <div class="dryerpic" id="drypic">
+    <img class="dryer" src="assets/dryer.png" alt="washing">
+   </div>
 
 
  
   <div class="rdbutton">
-    <a href="index.html">
-      <div class="top">Sorting</div>
+    <div class="home">
+      <div class="top" id="top" onclick="showDivhome
+    ()">Sorting</div>
+      <div class="topb" id="topb">Sorting</div>
       <div class="sort"></div>
-    </a>
+    </div>
  
 
-    <a href="wash.html">
-      <div class="mid">Washing</div>
+    <div class="washpage" >
+      <div class="mid" id="mid" onclick="showDivwash()">Washing</div>
+      <div class="midb" id="midb">Washing</div>
       <div class="wash"></div>
-    </a>
+    </div>
   
 
-    <a href="dry.html">
-      <div class="last">Drying</div>
+    <div class="drypage" >
+      <div class="last" id="last" onclick="showDivdry()">Drying</div>
+      <div class="lastb" id="lastb">Drying</div>
       <div class="dry"></div>
-    </a>
+    </div>
 
 
   </div>
+</div>
 
-    

@@ -109,7 +109,7 @@ a{
     margin-top:-1px;
   }
 
-  a:hover{
+  input.choice:hover{
     background-color: #7e7e7e;
     color: rgb(0, 0, 0);
   }
@@ -139,7 +139,7 @@ a{
     margin-left: calc(var(--base) );
     margin-right: calc(var(--base));
     margin-top: calc(var(--base) * 2);
-    gap:20px;
+
   }
 
 
@@ -151,7 +151,7 @@ a{
     height:auto;
 
     margin-right: -30vw;
-    margin-bottom:-25vh;
+    margin-bottom:-20vh;
 
     right:0;
     bottom:0;
@@ -171,7 +171,7 @@ a{
     height:100px;
     background-color:#cecece;
 
-    margin-left:calc(var(--base) * 2);
+    margin-left:calc(var(--base) * 1);
     margin-bottom:calc(var(--base));
 
     font-size:10px;
@@ -179,13 +179,26 @@ a{
 
   }
 
-.top{
+.topb{
   position:absolute;
   left:30%;
   margin-top:-20px;
 
   font-size:12px;
   font-weight: 800;
+
+  cursor:pointer;
+
+}
+
+.top{
+  display:none;
+  position:absolute;
+  left:30%;
+  margin-top:-20px;
+
+  font-size:12px;
+  font-weight: 400;
 
   cursor:pointer;
 
@@ -199,6 +212,21 @@ a{
 
   font-size:12px;
   opacity:70%;
+  cursor:pointer;
+
+}
+
+.midb{
+  display:none;
+  position:absolute;
+  top:9%;
+  right:0%;
+  margin-right:-50px;
+  font-weight: 800;
+
+  font-size:12px;
+  opacity:100%;
+  cursor:pointer;
 
 }
 
@@ -211,6 +239,21 @@ a{
 
   font-size:12px;
   opacity:70%;
+  cursor:pointer;
+
+}
+
+.lastb{
+  display:none;
+  position:absolute;
+  top:43%;
+  right:0;
+  margin-right:-50px;
+
+  font-size:12px;
+  opacity:100%;
+  font-weight: 800;
+  cursor:pointer;
 
 }
 
@@ -220,7 +263,7 @@ a{
 .sort{
   display:block;
 
-  opacity:100%;
+  opacity:50%;
 
   background-color:black;
   width:3px;
@@ -266,7 +309,7 @@ a{
 }
 
   
-.top:hover,
+.topb:hover,
 .mid:hover,
 .last:hover{
   opacity:100%;
@@ -295,8 +338,8 @@ a{
 }
 
 .clothes{
-  height:8vh;
-  padding-left:30px;
+  height:7vh;
+  padding-left:20px;
   padding-right:0;
   padding-top:0;
   padding-bottom:0;
@@ -354,6 +397,8 @@ input{
 
   border-radius:10px;
   background-color:#6A6A6A;
+  margin-top:2vh;
+  margin-left:2vw;
 
 }
 
@@ -370,6 +415,7 @@ input{
   letter-spacing: 0.3px;
   padding-left:8px;
   padding-right:8px;
+  
   line-height: 110%;
 
   text-align: center;
@@ -411,6 +457,33 @@ form{
 
 
 
+.washer{
+  position: fixed;
+
+  display:none;
+  width:80vw;
+  height:auto;
+  
+  margin-right: -40vw;
+  margin-bottom:-20vw;
+  right:0;
+  bottom:0;
+
+}
+
+.dryer{
+  position: fixed;
+
+  display:none;
+  width:80vw;
+  height:auto;
+  
+  margin-right: -40vw;
+  margin-bottom:-20vw;
+  right:0;
+  bottom:0;
+
+}
 
 
 
@@ -422,7 +495,11 @@ form{
 
 
 
-@media(min-width: 550px) {
+
+
+
+
+@media(min-width: 560px) {
   .bucket{
     width:45vw;
     margin-right: -10vw;
@@ -438,16 +515,28 @@ form{
     height:150px;
   }
 
-
-  
   .top{
     left:30%;
     margin-top:-30px;
   
     font-size:18px;
   }
+  
+  .topb{
+    left:30%;
+    margin-top:-30px;
+  
+    font-size:18px;
+  }
+
+
 
   .mid{
+    margin-right:-70px;
+  font-size:18px;
+  
+  }
+  .midb{
     margin-right:-70px;
   font-size:18px;
   
@@ -461,10 +550,22 @@ form{
     font-size:18px;
   
   }
+  .lastb{
+    
+    top:44%;
+    margin-right:-70px;
+    font-size:18px;
+  
+  }
   
   .tip{
-    height:27vh;
-    width:18vw;
+    
+    width:10vw;
+    margin-top:0;
+    margin-left:2vw;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
   }
 
 
@@ -501,7 +602,7 @@ form{
 .sort{
   display:block;
 
-  opacity:100%;
+  opacity:50%;
 
   background-color:black;
   width:3px;
@@ -561,7 +662,7 @@ section{
 
   margin-left: calc(var(--base) * 2);
   margin-top: calc(var(--base) * 2);
-  gap:20px;
+
 }
 
 .enterblock{
@@ -589,19 +690,56 @@ section{
 
   flex-direction: column;
 
-  height:32vh;
-  width:15vw;
+  
+  width:19vw;
+  max-height: 25svh;
+
 
 }
 
+.washer{
+  width:80vw;
+  margin-right: -40vw;
+  margin-bottom:-40vw;
+
 }
 
 
-@media(min-width: 400px) {
+.dryer{
+  width:80vw;
+  margin-right: -40vw;
+  margin-bottom:-40vw;
+
+}
+
+.pants{
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.coat{
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.sweater{
+  margin-left: 0;
+  margin-top: 0;
+}
+}
+
+
+@media(max-width: 560px) {
   .bucket{
     width:45vw;
     margin-right: -10vw;
     margin-bottom:-20vw;
  
   }
+
+  .tip{
+    margin-left:0;
+  }
+
+}
 

@@ -3,14 +3,13 @@ window.stateCallback = () => {
 }
 
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+
+function dropMenu() {
+    document.getElementById("clothesMenu").classList.toggle("show");
+}
   
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
+
+window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
@@ -21,11 +20,11 @@ function myFunction() {
         }
       }
     }
-  }
+}
 
 window.stateCallback = () => {
   let selectElement = document.querySelector('[name="some-option"]');
-  console.log(select.Element.value);
+  console.log(selectElement.value);
 }
 
 
@@ -63,85 +62,235 @@ function showDivsweater() {
 
 
 
-const submitButton = document.getElementById('submitbtn');
+const shirtSubmitButton = document.getElementById('shirt-submit');
+const pantsSubmitButton = document.getElementById('pants-submit');
+const coatSubmitButton = document.getElementById('coat-submit');
+const sweaterSubmitButton = document.getElementById('sweater-submit');
 
-submitButton.addEventListener('click', function() {
+const shakeBucket = document.getElementById('bucketpic');
+const rotateWash = document.getElementById('washerpic');
+const rotateDry = document.getElementById('dryerpic');
+
+
+
+shirtSubmitButton.addEventListener('click', function() {
   if (document.getElementById('topb').style.display !== "none") {
     showSort();
+    setTimeout(function() {
+      shakeBucket.classList.add('animate');
+      setTimeout(function() {
+        shakeBucket.classList.remove('animate');
+      }, 1000);
+    });
+
+    
+
   } else if (document.getElementById('midb').style.display !== "none") {
     showWash();
+    setTimeout(function() {
+      rotateWash.classList.add('animate');
+      setTimeout(function() {
+        rotateWash.classList.remove('animate');
+      }, 1000);});
+
   } else if (document.getElementById('lastb').style.display !== "none") {
     showDry();
+    setTimeout(function() {
+      rotateDry.classList.add('animate');
+      setTimeout(function() {
+        rotateDry.classList.remove('animate');
+      }, 1000);});
   }
 });
 
 
 
 
+pantsSubmitButton.addEventListener('click', function() {
+  if (document.getElementById('topb').style.display !== "none") {
+    showSort();
+    setTimeout(function() {
+      shakeBucket.classList.add('animate');
+      setTimeout(function() {
+        shakeBucket.classList.remove('animate');
+      }, 1000);
+    });
+    
+  } else if (document.getElementById('midb').style.display !== "none") {
+    showWash();
+    setTimeout(function() {
+      rotateWash.classList.add('animate');
+      setTimeout(function() {
+        rotateWash.classList.remove('animate');
+      }, 1000);});
+
+
+  } else if (document.getElementById('lastb').style.display !== "none") {
+    showDry();
+    setTimeout(function() {
+      rotateDry.classList.add('animate');
+      setTimeout(function() {
+        rotateDry.classList.remove('animate');
+      }, 1000);});
+  }
+});
+
+
+
+coatSubmitButton.addEventListener('click', function() {
+  if (document.getElementById('topb').style.display !== "none") {
+    showSort();
+    setTimeout(function() {
+      shakeBucket.classList.add('animate');
+      setTimeout(function() {
+        shakeBucket.classList.remove('animate');
+      }, 1000);
+    });
+
+
+  } else if (document.getElementById('midb').style.display !== "none") {
+    showWash();
+    setTimeout(function() {
+      rotateWash.classList.add('animate');
+      setTimeout(function() {
+        rotateWash.classList.remove('animate');
+      }, 1000);});
+
+
+  } else if (document.getElementById('lastb').style.display !== "none") {
+    showDry();
+    setTimeout(function() {
+      rotateDry.classList.add('animate');
+      setTimeout(function() {
+        rotateDry.classList.remove('animate');
+      }, 1000);});
+  }
+});
+
+
+
+sweaterSubmitButton.addEventListener('click', function() {
+  if (document.getElementById('topb').style.display !== "none") {
+    showSort();
+    setTimeout(function() {
+      shakeBucket.classList.add('animate');
+      setTimeout(function() {
+        shakeBucket.classList.remove('animate');
+      }, 1000);
+    });
+
+
+  } else if (document.getElementById('midb').style.display !== "none") {
+    showWash();
+    setTimeout(function() {
+      rotateWash.classList.add('animate');
+      setTimeout(function() {
+        rotateWash.classList.remove('animate');
+      }, 1000);});
+
+
+  } else if (document.getElementById('lastb').style.display !== "none") {
+    showDry();
+    setTimeout(function() {
+      rotateDry.classList.add('animate');
+      setTimeout(function() {
+        rotateDry.classList.remove('animate');
+      }, 1000);});
+  }
+});
+
 
 
 
 function showSort() {
-  const colorInput = document.getElementById('color-option');
-  if (colorInput.value === 'Red' || colorInput.value === 'Blue' || colorInput.value === 'Black' || colorInput.value === 'Green' || colorInput.value === 'Brown') {
-    document.getElementById('tip1').style.display = "flex";
-    document.getElementById('tip2').style.display = "none";
-    document.getElementById('tip3').style.display = "none";
-    document.getElementById('tip4').style.display = "none";
-    document.getElementById('tip5').style.display = "none";
-    document.getElementById('tip6').style.display = "none";
-  } else {
-    document.getElementById('tip2').style.display = "flex";
-    document.getElementById('tip1').style.display = "none";
-    document.getElementById('tip3').style.display = "none";
-    document.getElementById('tip4').style.display = "none";
-    document.getElementById('tip5').style.display = "none";
-    document.getElementById('tip6').style.display = "none";
+  var colorInputs = document.querySelectorAll("#color-option-shirt, #color-option-pants, #color-option-coat,#color-option-sweater");
+  var darkColors = ['red', 'blue', 'black', 'green', 'brown'];
+  var noValue = ['select'];
+  
+  for (var i = 0; i < colorInputs.length; i++) {
+    if (noValue.includes(colorInputs[i].value)) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      return;
+    }
+    if (!darkColors.includes(colorInputs[i].value)) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "flex";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      return;
+    }
+    if (darkColors.includes(colorInputs[i].value)) {
+      document.getElementById('tip1').style.display = "flex";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      return;
+    }
   }
+  
 }
+
+
+ 
+
 
 function showWash() {
-  const cottonInput = document.getElementById('cotton');
-  if (cottonInput.value > 20){
-    document.getElementById('tip1').style.display = "none";
-    document.getElementById('tip2').style.display = "none";
-    document.getElementById('tip3').style.display = "flex";
-    document.getElementById('tip4').style.display = "none";
-    document.getElementById('tip5').style.display = "none";
-    document.getElementById('tip6').style.display = "none";
-  } else {
-    document.getElementById('tip1').style.display = "none";
-    document.getElementById('tip2').style.display = "none";
-    document.getElementById('tip3').style.display = "none";
-    document.getElementById('tip4').style.display = "flex";
-    document.getElementById('tip5').style.display = "none";
-    document.getElementById('tip6').style.display = "none";
-  }
+  var cottonInputs = document.querySelectorAll("#cotton-shirt, #cotton-pants, #cotton-coat,#cotton-sweater");
+  for (var i = 0; i < cottonInputs.length; i++) {
+    if (cottonInputs[i].value > 20) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "flex";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      return; 
+    }else{
+  
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+}}
 }
+
+
+
+
+
 
 function showDry() {
-  const cottonInput = document.getElementById('cotton');
-  if (cottonInput.value > 20){
-    document.getElementById('tip1').style.display = "none";
-    document.getElementById('tip2').style.display = "none";
-    document.getElementById('tip3').style.display = "none";
-    document.getElementById('tip4').style.display = "none";
-    document.getElementById('tip5').style.display = "flex";
-    document.getElementById('tip6').style.display = "none";
-  } else {
-    document.getElementById('tip1').style.display = "none";
-    document.getElementById('tip2').style.display = "none";
-    document.getElementById('tip3').style.display = "none";
-    document.getElementById('tip4').style.display = "none";
-    document.getElementById('tip5').style.display = "none";
-    document.getElementById('tip6').style.display = "flex";
-  }
+  var cottonInputs = document.querySelectorAll("#cotton-shirt, #cotton-pants, #cotton-coat,#cotton-sweater");
+  for (var i = 0; i < cottonInputs.length; i++) {
+    if (cottonInputs[i].value > 20) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "flex";
+      document.getElementById('tip6').style.display = "none";
+      return; 
+    }else{
+  
+  document.getElementById('tip1').style.display = "none";
+  document.getElementById('tip2').style.display = "none";
+  document.getElementById('tip3').style.display = "none";
+  document.getElementById('tip4').style.display = "none";  
+  document.getElementById('tip5').style.display = "none";
+  document.getElementById('tip6').style.display = "flex";
+}}
 }
-
-
-
-
-
 
 
 
@@ -155,13 +304,23 @@ function showDivwash() {
   var topDiv = document.getElementById('top');
   var lastDiv = document.getElementById('last');
   var lastbDiv = document.getElementById('lastb');
-  var washpicDiv = document.getElementsByClassName('washer')[0];
-  var sortpicDiv = document.getElementsByClassName('bucket')[0];
-  var drypicDiv = document.getElementsByClassName('dryer')[0];
+  var washpicDiv = document.getElementById('washerpic');
+  var sortpicDiv = document.getElementById('bucketpic');
+  var drypicDiv = document.getElementById('dryerpic');
   var tipDiv = document.getElementById('tip1', 'tip2', 'tip3', 'tip4', 'tip5', 'tip6');
 
-
-  if (midbDiv.style.display === 'none') {
+  if(midDiv.style.display === 'none'){
+    midbDiv.style.display = 'none';
+    midDiv.style.display= 'block';
+    topbDiv.style.display= 'block';
+    topDiv.style.display='none';
+    lastDiv.style.display='block';
+    lastbDiv.style.display='none';
+    washpicDiv.style.display = 'none';
+    sortpicDiv.style.display = 'block';
+    drypicDiv.style.display = 'none';
+    tipDiv.style.display = 'none';
+  }else{
     midbDiv.style.display = 'block';
     midDiv.style.display= 'none';
     topbDiv.style.display= 'none';
@@ -173,8 +332,13 @@ function showDivwash() {
     drypicDiv.style.display = 'none';
     tipDiv.style.display = 'none';
 
-  }
+  } 
+  
 }
+
+
+
+
 
 
 
@@ -187,13 +351,25 @@ function showDivdry() {
   var topDiv = document.getElementById('top');
   var lastDiv = document.getElementById('last');
   var lastbDiv = document.getElementById('lastb');
-  var washpicDiv = document.getElementsByClassName('washer')[0];
-  var sortpicDiv = document.getElementsByClassName('bucket')[0];
-  var drypicDiv = document.getElementsByClassName('dryer')[0];
+  var washpicDiv = document.getElementById('washerpic');
+  var sortpicDiv = document.getElementById('bucketpic');
+  var drypicDiv = document.getElementById('dryerpic');
   var tipDiv = document.getElementById('tip1', 'tip2', 'tip3', 'tip4', 'tip5', 'tip6');
 
+  if (lastDiv.style.display === 'none') {
+    midbDiv.style.display = 'none';
+    midDiv.style.display= 'block';
+    topbDiv.style.display= 'block';
+    topDiv.style.display='none';
+    lastDiv.style.display='block';
+    lastbDiv.style.display='none';
+    washpicDiv.style.display = 'none';
+    sortpicDiv.style.display = 'block';
+    drypicDiv.style.display = 'none';
+    tipDiv.style.display = 'none';
 
-  if (lastbDiv.style.display === 'none') {
+
+  } else {
     midbDiv.style.display = 'none';
     midDiv.style.display= 'block';
     topbDiv.style.display= 'none';
@@ -203,17 +379,8 @@ function showDivdry() {
     washpicDiv.style.display = 'none';
     sortpicDiv.style.display = 'none';
     drypicDiv.style.display = 'block';
-
-  } else {
-    midbDiv.style.display = 'none';
-    topbDiv.style.display= 'block';
-    topDiv.style.display='none';
-    lastDiv.style.display='block';
-    lastbDiv.style.display='none';
-    washpicDiv.style.display = 'none';
-    sortpicDiv.style.display = 'block';
-    drypicDiv.style.display = 'none';
     tipDiv.style.display = 'none';
+
   }
 }
 
@@ -225,9 +392,9 @@ function showDivhome() {
   var topDiv = document.getElementById('top');
   var lastDiv = document.getElementById('last');
   var lastbDiv = document.getElementById('lastb');
-  var washpicDiv = document.getElementsByClassName('washer')[0];
-  var sortpicDiv = document.getElementsByClassName('bucket')[0];
-  var drypicDiv = document.getElementsByClassName('dryer')[0];
+  var washpicDiv = document.getElementById('washerpic');
+  var sortpicDiv = document.getElementById('bucketpic');
+  var drypicDiv = document.getElementById('dryerpic');
   var tipDiv = document.getElementById('tip1', 'tip2', 'tip3', 'tip4', 'tip5', 'tip6');
 
 
@@ -242,5 +409,143 @@ function showDivhome() {
     sortpicDiv.style.display = 'block';
     drypicDiv.style.display = 'none';
     tipDiv.style.display = 'none';
+  }else {
+    midbDiv.style.display = 'none';
+    midDiv.style.display= 'block';
+    topbDiv.style.display= 'none';
+    topDiv.style.display='block';
+    lastDiv.style.display='block';
+    lastbDiv.style.display='none';
+    washpicDiv.style.display = 'none';
+    sortpicDiv.style.display = 'none';
+    drypicDiv.style.display = 'none';
+    tipDiv.style.display = 'none';
+  }
+}
+
+
+
+
+
+
+
+
+
+
+function changeColor(color) {
+  var iconColor = document.getElementById("st1");
+  if (color === "red") {
+      iconColor.style.fill = "red";
+      iconColor.style.fill = "red";
+  } else if (color === "blue") {
+       iconColor.style.fill = "blue";
+      iconColor.style.fill = "blue";
+  } else if (color === "white") {
+    iconColor.style.fill = "white";
+   iconColor.style.fill = "white";
+  } else if (color === "black") {
+    iconColor.style.fill = "black";
+   iconColor.style.fill = "black";
+  } else if (color === "beige") {
+    iconColor.style.fill = "beige";
+   iconColor.style.fill = "beige";
+  } else if (color === "brown") {
+    iconColor.style.fill = "brown";
+   iconColor.style.fill = "brown";
+  } else if (color === "green") {
+    iconColor.style.fill = "green";
+   iconColor.style.fill = "green";
+  }else{
+    iconColor.style.fill = "lightpink";
+   iconColor.style.fill = "lightpink";
+  }
+}
+
+
+function changepantsColor(color) {
+  var pantColor = document.getElementById("pant1");
+  if (color === "red") {
+      pantColor.style.fill = "red";
+      pantColor.style.fill = "red";
+  } else if (color === "blue") {
+    pantColor.style.fill = "blue";
+    pantColor.style.fill = "blue";
+  } else if (color === "white") {
+    pantColor.style.fill = "white";
+    pantColor.style.fill = "white";
+  } else if (color === "black") {
+    pantColor.style.fill = "black";
+    pantColor.style.fill = "black";
+  } else if (color === "beige") {
+    pantColor.style.fill = "beige";
+    pantColor.style.fill = "beige";
+  } else if (color === "brown") {
+    pantColor.style.fill = "brown";
+    pantColor.style.fill = "brown";
+  } else if (color === "green") {
+    pantColor.style.fill = "green";
+    pantColor.style.fill = "green";
+  }else{
+    pantColor.style.fill = "lightpink";
+   pantColor.style.fill = "lightpink";
+  }
+}
+
+function changecoatColor(color) {
+  var coatColor = document.getElementById("coat1");
+  if (color === "red") {
+    coatColor.style.fill = "red";
+    coatColor.style.fill = "red";
+  } else if (color === "blue") {
+    coatColor.style.fill = "blue";
+    coatColor.style.fill = "blue";
+  } else if (color === "white") {
+    coatColor.style.fill = "white";
+    coatColor.style.fill = "white";
+  } else if (color === "black") {
+    coatColor.style.fill = "black";
+    coatColor.style.fill = "black";
+  } else if (color === "beige") {
+    coatColor.style.fill = "beige";
+    coatColor.style.fill = "beige";
+  } else if (color === "brown") {
+    coatColor.style.fill = "brown";
+    coatColor.style.fill = "brown";
+  } else if (color === "green") {
+    coatColor.style.fill = "green";
+    coatColor.style.fill = "green";
+  }else{
+    coatColor.style.fill = "lightpink";
+    coatColor.style.fill = "lightpink";
+  }
+}
+
+
+function changesweaterColor(color) {
+  var sweaterColor = document.getElementById("sweater0");
+  if (color === "red") {
+    sweaterColor.style.fill = "red";
+    sweaterColor.style.fill = "red";
+  } else if (color === "blue") {
+    sweaterColor.style.fill = "blue";
+    sweaterColor.style.fill = "blue";
+  } else if (color === "white") {
+    sweaterColor.style.fill = "white";
+    sweaterColor.style.fill = "white";
+  } else if (color === "black") {
+    sweaterColor.style.fill = "black";
+    sweaterColor.style.fill = "black";
+  } else if (color === "beige") {
+    sweaterColor.style.fill = "beige";
+    sweaterColor.style.fill = "beige";
+  } else if (color === "brown") {
+    sweaterColor.style.fill = "brown";
+    sweaterColor.style.fill = "brown";
+  } else if (color === "green") {
+    sweaterColor.style.fill = "green";
+    sweaterColor.style.fill = "green";
+  }else{
+    sweaterColor.style.fill = "lightpink";
+    sweaterColor.style.fill = "lightpink";
   }
 }

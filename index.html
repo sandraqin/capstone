@@ -7,14 +7,15 @@
 		<link href="assets/common.css" rel="stylesheet">
         <script defer src="assets/main.js"></script>
         <script defer src="assets/form-state.js"></script>
+      
 	</head>
 
 
 <body>
   <div id="parentContainer">
     <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Choose Clothes<img src="assets/down.png" alt="down" width="20" height="20" class="down"> </button>
-        <div id="myDropdown" class="dropdown-content">
+      <button onclick="dropMenu()" class="dropbtn">Choose Clothes<img src="assets/down.png" alt="down" width="20" height="20" class="down"></img> </button>
+        <div id="clothesMenu" class="dropdown-content">
           <input type="button" class="choice" value="Shirt" onclick="showDivshirt()" />
           <input type="button" class="choice" value="Pants" onclick="showDivpants()" />
           <input type="button" class="choice" value="Coat" onclick="showDivcoat()" />
@@ -33,41 +34,65 @@
     
     <div class="enterblock" id="shirt">
         <div class="icon">
-          <img class="clothes" src="assets/shirt.png" alt="shirt">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 230.59 211.77" style="enable-background:new 0 0 230.59 211.77;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:#FFFFFF;}
+          #st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+          #st2{opacity:0.41;}
+          #st3{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+        </style>
+        <path id="st1"  d="M6.19,67.45L48,19.35c0,0,18.04-14.32,40.94-8.88c0,0,2.86,20.62,25.2,20.33c0,0,25.12,0.75,28.02-21.56
+          c0,0,24.32-4.1,41.97,10.06l40.88,48.15l-49.52,32.89l-1.15,99.47H55.73l-0.29-95.56L6.19,67.45z"/>
+        <g>
+          <path d="M228.84,68.53c0.13-0.88-0.09-1.78-0.62-2.47c-0.22-0.29-22.48-29.29-37.77-45.13C175.86,5.81,156.6,6.21,145.08,6.44
+            c-1.29,0.03-2.49,0.05-3.57,0.05c-1.57,0-2.84,1.37-2.84,3.07c0,10.18-10.49,18.46-23.38,18.46S91.92,19.75,91.92,9.57
+            c0-1.7-1.27-3.07-2.84-3.07c-1.09,0-2.29-0.03-3.57-0.05C74,6.21,54.73,5.81,40.13,20.93C24.84,36.77,2.59,65.77,2.36,66.06
+            c-0.53,0.68-0.75,1.59-0.62,2.47c0.13,0.88,0.62,1.66,1.32,2.12l49.89,33.2v93.4c0,3.4,2.54,6.15,5.66,6.15h113.35
+            c3.13,0,5.67-2.76,5.67-6.15v-93.4l49.89-33.2C228.23,70.18,228.71,69.41,228.84,68.53z M177.63,96.64V43.42h-5.67v153.84H58.62
+            V43.42h-5.66v53.22L8.83,67.28c5.89-7.57,22.89-29.12,35.22-41.89C56.95,12.01,74.08,12.37,85.4,12.59
+            c0.36,0.01,0.72,0.02,1.07,0.02c1.77,12.14,14.03,21.57,28.82,21.57c14.8,0,27.05-9.43,28.82-21.57c0.35,0,0.71-0.01,1.07-0.02
+            c11.33-0.22,28.44-0.58,41.36,12.79c12.31,12.76,29.32,34.32,35.22,41.89L177.63,96.64z"/>
+          <line id="st3" x1="66.18" y1="100.34" x2="66.18" y2="62.8"/>
+          <line id="st3" x1="66.18" y1="55.51" x2="66.18" y2="47.74"/>
+        </g>
+        </svg>
         </div>
 
         <div class="material">
           
           <div class="form">
             <label for = "cotton">Cotton: &nbsp</label>
-            <input id="cotton" name="some-text" placeholder="<100" required type="number">%
+            <input id="cotton-shirt" name="some-text" placeholder="<100" required type="number">%
           </div>
 
           <div class="form">
-            <label for = "poly">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+            <label for = "poly-shirt">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
           </div>
 
           <div class="form">
-            <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+            <label for = "acrylic-shirt">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
           </div>
 
           <div class="form">
             <label for="color-option">Color:</label>
-             <select id="color-option" name="some-option">
-                <option>Red</option>
-                <option>Blue</option>
-                <option>White</option>
-                <option>Black</option>
-                <option>Beige</option>
-                <option>Brown</option>
-                <option>Green</option>
-                <option>LightColor</option>
-              </select>
+            <select id="color-option-shirt" name="some-option" onchange="changeColor(this.value)">
+              <option value="select" disabled selected>Select </option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="white">White</option>
+              <option value="black">Black</option>
+              <option value="beige">Beige</option>
+              <option value="brown">Brown</option>
+              <option value="green">Green</option>
+              <option value="lightcolor">LightColor</option>
+            </select>
           </div>
+          
           
     </div>
         
-    <button class="enterbtn" id="submitbtn">
+    <button class="enterbtn" id="shirt-submit">
 
           Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
         </button>
@@ -79,42 +104,63 @@
 
   <form class="pants" action="" method="post"  onsubmit="return false">
   <div class="enterblock" id="pants">
-        <div class="icon">
-          <img class="clothes" src="assets/pant.png" alt="pants">
+        <div class="icon2">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 121.86 211.77" style="enable-background:new 0 0 121.86 211.77;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:#FFFFFF;}
+          #pant1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+          .st2{opacity:0.41;}
+          .st3{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+        </style>
+        <polygon id="pant1" points="22.01,11.22 22.01,25.55 16.04,25.55 15.69,187.45 20.16,190.45 20.01,200.74 48.91,200.74 
+          48.91,191.05 53.27,188.82 60.93,77.31 63.68,77.31 71.61,187.45 75.83,191.3 75.83,200.74 104.08,200.74 104.08,190.81 
+          109.53,187.45 109.53,22.65 102.84,21.55 102.09,9.91 "/>
+        <path d="M106.04,18.3l-0.07-5.39c-0.03-3.18-2.62-5.73-5.8-5.73h-37.7h-37.7c-3.17,0-5.76,2.56-5.8,5.73l-0.06,5.39
+          c-3.18,0.03-5.75,2.62-5.75,5.8v163.35c0,2.69,1.88,4.86,4.36,5.51c-0.01,0.1-0.06,0.18-0.06,0.28v5.16c0,3.21,2.59,5.8,5.8,5.8
+          h23.29c3.2,0,5.8-2.59,5.8-5.8v-5.16c0-0.09-0.05-0.18-0.05-0.27c2.26-0.6,4.03-2.44,4.32-4.85l5.84-99.32l5.84,99.32
+          c0.29,2.41,2.06,4.26,4.32,4.85c0,0.09-0.05,0.17-0.05,0.27v5.16c0,3.21,2.59,5.8,5.8,5.8h23.29c3.21,0,5.8-2.59,5.8-5.8v-5.16
+          c0-0.1-0.05-0.18-0.06-0.28c2.49-0.65,4.36-2.82,4.36-5.51V24.1C111.78,20.92,109.21,18.33,106.04,18.3z M62.48,12.98h37.7
+          l0.11,9.67h-75.6l0.1-9.67H62.48z M46.58,198.41H23.29v-5.16h23.29V198.41z M58.09,76.51l-7.21,110.94h-4.3H23.29h-4.3V25.55h86.99
+          v161.9h-4.3H78.38h-4.3L66.87,76.51C66.26,71.3,58.7,71.3,58.09,76.51z M101.67,198.41H78.38v-5.16h23.29V198.41z"/>
+        <rect x="18.99" y="22.65" width="86.99" height="6.46"/>
+        </svg>
+
         </div>
 
         <div class="material">
           
           <div class="form">
             <label for = "cotton">Cotton: &nbsp</label>
-            <input id="cotton" name="some-text" placeholder="<100" required type="number">%
+            <input id="cotton-pants" name="some-text" placeholder="<100" required type="number">%
           </div>
 
           <div class="form">
-            <label for = "poly">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+            <label for = "poly">Polyester: &nbsp</label><input id="poly-pants" name="some-text" placeholder="<100" required type="number">%
           </div>
 
           <div class="form">
-            <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+            <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic-pants" name="some-text" placeholder="<100" required type="number">%
           </div>
 
           <div class="form">
             <label for="color-option">Color:</label>
-             <select id="color-option" name="some-option">
-                <option>Red</option>
-                <option>Blue</option>
-                <option>White</option>
-                <option>Black</option>
-                <option>Beige</option>
-                <option>Brown</option>
-                <option>Green</option>
-                <option>LightColor</option>
-              </select>
+            <select id="color-option-pants" name="some-option" onchange="changepantsColor(this.value)">
+              <option value="" disabled selected>Select </option>
+              <option value="red">Red</option>
+              <option value="blue">Blue</option>
+              <option value="white">White</option>
+              <option value="black">Black</option>
+              <option value="beige">Beige</option>
+              <option value="brown">Brown</option>
+              <option value="green">Green</option>
+              <option value="lightcolor">LightColor</option>
+            </select>
           </div>
           
     </div>
         
-        <button class="enterbtn" id="submitbtn">
+        <button class="enterbtn" id="pants-submit">
 
           Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
         </button>
@@ -128,42 +174,71 @@
 
 <form class="coat" action="" method="post"  onsubmit="return false">
   <div class="enterblock" id="coat">
-    <div class="icon">
-      <img class="clothes" src="assets/coat.png" alt="shirt">
+    <div class="icon3">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 205.3 211.77" style="enable-background:new 0 0 205.3 211.77;" xml:space="preserve">
+      <style type="text/css">
+        #coat1{fill:#FFFFFF;}
+        .st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+        .st2{opacity:0.41;}
+        .st3{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+      </style>
+      <path id="coat1" d="M140.64,11.97c-0.3-0.06-0.48-0.07-0.48-0.07l-0.03,0.06c-0.79-0.03-1.59-0.06-2.39-0.06h-8.59H103.6h-2.43
+        H67.03h-4.27c0,0-0.54,0.05-1.36,0.27C31.21,15.01,7.58,40.41,7.58,71.35v16.42v91.28c0,13.75,11.14,24.89,24.89,24.89h14.75v-6.1
+        l35.45,6.1l15.42-29.87l0,0l22.15,29.87l37.31-6.42v6.42h14.75c13.75,0,24.89-11.14,24.89-24.89V71.35
+        C197.19,39.49,172.12,13.48,140.64,11.97z"/>
+      <g>
+        <line class="st3" x1="102.38" y1="85.73" x2="75.35" y2="9.86"/>
+        <path class="st3" d="M129.41,9.86l-31.3,91.52l0.24,70.65L82.94,201.9l-44.1-7.59c-9.48-1.9-8.06-9.96-8.06-9.96
+          s0.47-97.68,0-105.74c-0.47-8.06,9.01-9.96,9.01-9.96h5.69c6.16-0.47,7.59-7.59,7.59-7.59V22.19c0-11.38,9.96-12.33,9.96-12.33
+          H129.41"/>
+        <path class="st3" d="M98.6,101.38l-0.24,70.65l22.15,29.87l44.1-7.59c9.48-1.9,8.06-9.96,8.06-9.96s-0.47-97.68,0-105.74
+          c0.47-8.06-9.01-9.96-9.01-9.96h-5.69c-6.16-0.47-7.59-7.59-7.59-7.59V22.19c0-11.38-9.96-12.33-9.96-12.33"/>
+        <line class="st3" x1="40.17" y1="81.15" x2="40.17" y2="88.98"/>
+        <line class="st3" x1="40.17" y1="94.8" x2="40.17" y2="121.03"/>
+        <path class="st3" d="M7.84,85.73v91.28c0,13.75,11.14,24.89,24.89,24.89h14.75v-6.56"/>
+        <path class="st3" d="M103.86,9.86H67.29c-32.83,0-59.45,26.62-59.45,59.45"/>
+        <path class="st3" d="M101.43,9.86h36.57c32.83,0,59.45,26.62,59.45,59.45v107.7c0,13.75-11.14,24.89-24.89,24.89h-14.75v-6.56"/>
+        <rect x="125.53" y="127.32" class="st3" width="33.41" height="10.37"/>
+        <rect x="48.33" y="127.32" class="st3" width="33.41" height="10.37"/>
+      </g>
+      </svg>
+
     </div>
 
     <div class="material">
       
       <div class="form">
         <label for = "cotton">Cotton: &nbsp</label>
-        <input id="cotton" name="some-text" placeholder="<100" required type="number">%
+        <input id="cotton-coat" name="some-text" placeholder="<100" required type="number">%
       </div>
 
       <div class="form">
-        <label for = "poly">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+        <label for = "poly">Polyester: &nbsp</label><input id="poly-coat" name="some-text" placeholder="<100" required type="number">%
       </div>
 
       <div class="form">
-        <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+        <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic-coat" name="some-text" placeholder="<100" required type="number">%
       </div>
 
       <div class="form">
         <label for="color-option">Color:</label>
-         <select id="color-option" name="some-option">
-            <option>Red</option>
-            <option>Blue</option>
-            <option>White</option>
-            <option>Black</option>
-            <option>Beige</option>
-            <option>Brown</option>
-            <option>Green</option>
-            <option>LightColor</option>
-          </select>
+        <select id="color-option-coat" name="some-option" onchange="changecoatColor(this.value)">
+          <option value="" disabled selected>Select </option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
+          <option value="beige">Beige</option>
+          <option value="brown">Brown</option>
+          <option value="green">Green</option>
+          <option value="lightcolor">LightColor</option>
+        </select>
       </div>
       
 </div>
     
-    <button class="enterbtn" id="submitbtn">
+    <button class="enterbtn" id="coat-submit">
 
           Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
         </button>
@@ -177,42 +252,79 @@
 
 <form class="sweater" action="" method="post"  onsubmit="return false">
 <div class="enterblock" id="sweater">
-  <div class="icon">
-    <img class="clothes" src="assets/sweater.png" alt="sweater">
+  <div class="icon3">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 190.81 211.77" style="enable-background:new 0 0 190.81 211.77;" xml:space="preserve">
+  <style type="text/css">
+    #sweater0{fill:#FFFFFF;}
+    .st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+    .st2{opacity:0.41;}
+    .st3{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+  </style>
+  <g>
+    <path id="sweater0" d="M11.9,65.17v10.27v117.47h25.14v11.48h59.39h0.69h59.39v-11.48h25.14V75.44V58.36V40.18
+      C177.29,10.53,150.8,7.37,150.8,7.37H135.8c0,21.63-17.44,39.18-39.03,39.36C75.18,46.55,57.74,29,57.74,7.37h-1.16H42.74
+      c0,0-26.49,3.16-30.83,32.81v18.18"/>
+  </g>
+  <g>
+    <path class="st3" d="M128.81,7.37c0,17.12-13.88,31-31,31s-31-13.88-31-31h-9.88"/>
+    <line class="st3" x1="12.25" y1="174.93" x2="37.38" y2="174.93"/>
+    <line class="st3" x1="37.38" y1="182.8" x2="97.46" y2="182.8"/>
+    <line class="st3" x1="52.5" y1="204.4" x2="52.5" y2="182.8"/>
+    <line class="st3" x1="52.5" y1="117.07" x2="52.5" y2="79.53"/>
+    <line class="st3" x1="52.5" y1="72.24" x2="52.5" y2="64.47"/>
+    <line class="st3" x1="70.16" y1="204.4" x2="70.16" y2="182.8"/>
+    <line class="st3" x1="89.09" y1="204.4" x2="89.09" y2="182.8"/>
+    <polyline class="st3" points="12.25,75.44 12.25,192.92 37.38,192.92 37.38,204.4 97.46,204.4 	"/>
+    <path class="st3" d="M97.46,46.74c-21.74,0-39.37-17.63-39.37-39.37H43.08c0,0-26.49,3.16-30.83,32.81v18.18"/>
+    <line class="st3" x1="37.38" y1="55.98" x2="37.38" y2="192.92"/>
+    <line class="st3" x1="126.27" y1="7.37" x2="136.14" y2="7.37"/>
+    <line class="st3" x1="181.98" y1="174.93" x2="156.85" y2="174.93"/>
+    <line class="st3" x1="156.85" y1="182.8" x2="96.77" y2="182.8"/>
+    <line class="st3" x1="141.73" y1="204.4" x2="141.73" y2="182.8"/>
+    <line class="st3" x1="124.07" y1="204.4" x2="124.07" y2="182.8"/>
+    <line class="st3" x1="105.13" y1="204.4" x2="105.13" y2="182.8"/>
+    <path class="st3" d="M96.77,46.74c21.74,0,39.37-17.63,39.37-39.37h15.01c0,0,26.49,3.16,30.83,32.81v18.18v17.08v117.47h-25.14
+      v11.48H96.77"/>
+    <line class="st3" x1="156.85" y1="55.98" x2="156.85" y2="192.92"/>
+  </g>
+  </svg>
+
   </div>
 
   <div class="material">
     
     <div class="form">
       <label for = "cotton">Cotton: &nbsp</label>
-      <input id="cotton" name="some-text" placeholder="<100" required type="number">%
+      <input id="cotton-sweater" name="some-text" placeholder="<100" required type="number">%
     </div>
 
     <div class="form">
-      <label for = "poly">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+      <label for = "poly">Polyester: &nbsp</label><input id="poly-sweater" name="some-text" placeholder="<100" required type="number">%
     </div>
 
     <div class="form">
-      <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+      <label for = "acrylic">Acrylic: &nbsp</label><input id="acrylic-sweater" name="some-text" placeholder="<100" required type="number">%
     </div>
 
     <div class="form">
       <label for="color-option">Color:</label>
-       <select id="color-option" name="some-option">
-          <option>Red</option>
-          <option>Blue</option>
-          <option>White</option>
-          <option>Black</option>
-          <option>Beige</option>
-          <option>Brown</option>
-          <option>Green</option>
-          <option>LightColor</option>
-        </select>
+      <select id="color-option-sweater" name="some-option" onchange="changesweaterColor(this.value)">
+        <option value="" disabled selected>Select </option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        <option value="beige">Beige</option>
+        <option value="brown">Brown</option>
+        <option value="green">Green</option>
+        <option value="lightcolor">LightColor</option>
+      </select>
     </div>
     
 </div>
   
-  <button class="enterbtn" id="submitbtn">
+  <button class="enterbtn" id="sweater-submit">
 
           Submit<img class="enter" src="assets/enterbutton.png" alt="Submit">
         </button>
@@ -230,33 +342,33 @@
 </div>
 
 <div class="tip" id="tip2">
-  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="light"></div>
+  <div class="tipicon"><img class="sorticon" src="assets/lightsort.png" alt="light"></div>
   <div class="tipcaption">Sort with light color clothes need to be wrote later
   </div>
 </div>
 
 <div class="tip" id="tip3">
-  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
-  <div class="tipcaption">Wash blahblahblah.
+  <div class="tipicon"><img class="sorticon" src="assets/under20.png" alt="dark"></div>
+  <div class="tipcaption">These clothes need to be washed in water that is no warmer than 20 degrees Celsius.
   </div>
 </div>
 
 <div class="tip" id="tip4">
-  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+  <div class="tipicon"><img class="sorticon" src="assets/under60.png" alt="dark"></div>
   <div class="tipcaption">Cold wash lalalalal.
   </div>
 </div>
 
 
 <div class="tip" id="tip5">
-  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
+  <div class="tipicon"><img class="sorticon" src="assets/nodryer.png" alt="dark"></div>
   <div class="tipcaption">Dry blahblahblah.
   </div>
 </div>
 
 <div class="tip" id="tip6">
-  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
-  <div class="tipcaption">Dry drydry lalalalal.
+  <div class="tipicon"><img class="sorticon" src="assets/dryericon.png" alt="dark"></div>
+  <div class="tipcaption">No dryer.
   </div>
 </div>
 
@@ -275,16 +387,16 @@
 
 
 <div class="othercontrols" >
-  <div class="corner" id="sortpic">
-  <img class="bucket" src="assets/bucket.png" alt="sorting">
+  <div class="corner" id="sortpic" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img class="bucket" id="bucketpic" src="assets/bucket.png" alt="sorting" ondragstart="drag(event)">
   </div>
 
   <div class="washpic" id="washpic">
-    <img class="washer" src="assets/washingmachine.png" alt="washing">
+    <img class="washer" id="washerpic" src="assets/washingmachine.png" alt="washing">
    </div>
 
   <div class="dryerpic" id="drypic">
-    <img class="dryer" src="assets/dryer.png" alt="washing">
+    <img class="dryer" id="dryerpic" src="assets/dryer.png" alt="washing">
    </div>
 
 
@@ -314,4 +426,6 @@
 
   </div>
 </div>
+
+</body>
 

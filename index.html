@@ -5,8 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="assets/reset.css" rel="stylesheet">
 		<link href="assets/common.css" rel="stylesheet">
+    <link href="/assets/favicon.svg" rel="icon" type="image/svg+xml">
         <script defer src="assets/main.js"></script>
         <script defer src="assets/form-state.js"></script>
+        
       
 	</head>
 
@@ -63,15 +65,15 @@
           
           <div class="form">
             <label for = "cotton">Cotton: &nbsp</label>
-            <input id="cotton-shirt" name="some-text" placeholder="<100" required type="number">%
+            <input id="cotton-shirt" name="some-text" placeholder="<100" required type="number under 100">%
           </div>
 
           <div class="form">
-            <label for = "poly-shirt">Polyester: &nbsp</label><input id="poly" name="some-text" placeholder="<100" required type="number">%
+            <label for = "poly-shirt">Polyester: &nbsp</label><input id="poly-shirt" name="some-text" placeholder="<100" required type="number under 100">%
           </div>
 
           <div class="form">
-            <label for = "acrylic-shirt">Acrylic: &nbsp</label><input id="acrylic" name="some-text" placeholder="<100" required type="number">%
+            <label for = "acrylic-shirt">Acrylic: &nbsp</label><input id="acrylic-shirt" name="some-text" placeholder="<100" required type="number under 100">%
           </div>
 
           <div class="form">
@@ -146,9 +148,9 @@
           <div class="form">
             <label for="color-option">Color:</label>
             <select id="color-option-pants" name="some-option" onchange="changepantsColor(this.value)">
-              <option value="" disabled selected>Select </option>
+              <option value="select" disabled selected>Select </option>
               <option value="red">Red</option>
-              <option value="blue">Blue</option>
+              <option value="jeans">Jeans</option>
               <option value="white">White</option>
               <option value="black">Black</option>
               <option value="beige">Beige</option>
@@ -224,9 +226,9 @@
       <div class="form">
         <label for="color-option">Color:</label>
         <select id="color-option-coat" name="some-option" onchange="changecoatColor(this.value)">
-          <option value="" disabled selected>Select </option>
+          <option value="select" disabled selected>Select </option>
           <option value="red">Red</option>
-          <option value="blue">Blue</option>
+          <option value="denim">Denim</option>
           <option value="white">White</option>
           <option value="black">Black</option>
           <option value="beige">Beige</option>
@@ -310,7 +312,7 @@
     <div class="form">
       <label for="color-option">Color:</label>
       <select id="color-option-sweater" name="some-option" onchange="changesweaterColor(this.value)">
-        <option value="" disabled selected>Select </option>
+        <option value="select" disabled selected>Select </option>
         <option value="red">Red</option>
         <option value="blue">Blue</option>
         <option value="white">White</option>
@@ -336,40 +338,61 @@
 
 
 <div class="tip" id="tip1">
-  <div class="tipicon"><img class="sorticon" src="assets/sorticon.png" alt="dark"></div>
-  <div class="tipcaption">Sort the clothes by dark colors, not with light clothes.
+  <div class="tipicon"><img class="sorticon" src="assets/DARK.png" alt="dark"></div>
+  <div class="tipcaption">Sort this dark clothing with other dark clothes to avoid color fading or bleeding.
   </div>
+  <div class="tag"><div id="tag-text">dark</div></div>
 </div>
 
 <div class="tip" id="tip2">
-  <div class="tipicon"><img class="sorticon" src="assets/lightsort.png" alt="light"></div>
-  <div class="tipcaption">Sort with light color clothes need to be wrote later
+  <div class="tipicon"><img class="sorticon" src="assets/LIGHT.png" alt="light"></div>
+  <div class="tipcaption">Sort this light-colored clothing with other light-colored clothes to avoid color dyeing.
   </div>
+  <div class="tag"><div id="tag-text">light</div></div>
 </div>
 
 <div class="tip" id="tip3">
-  <div class="tipicon"><img class="sorticon" src="assets/under20.png" alt="dark"></div>
-  <div class="tipcaption">These clothes need to be washed in water that is no warmer than 20 degrees Celsius.
+  <div class="tipicon"><img class="sorticon" src="assets/40.png" alt="dark"></div>
+  <div class="tipcaption">Use a gentle detergent and lukewarm water to prevent shrinkage or damage to the fibers. Wash the clothes on a normal cycle.
   </div>
+  <div class="tag"><div id="tag-text">40°C</div><div id="tag-text">gentle</div><div id="tag-text">normal cycle</div></div>
 </div>
 
 <div class="tip" id="tip4">
-  <div class="tipicon"><img class="sorticon" src="assets/under60.png" alt="dark"></div>
-  <div class="tipcaption">Cold wash lalalalal.
+  <div class="tipicon"><img class="sorticon" src="assets/20.png" alt="dark"></div>
+  <div class="tipcaption">Use a heavy-duty detergent and cool water to help remove dirt and stains.Wash the clothes on a delicate cycle.
   </div>
+  <div class="tag"><div id="tag-text"> <20°C </div><div id="tag-text">heavy</div><div id="tag-text">delicate cycle</div></div>
 </div>
-
 
 <div class="tip" id="tip5">
-  <div class="tipicon"><img class="sorticon" src="assets/nodryer.png" alt="dark"></div>
-  <div class="tipcaption">Dry blahblahblah.
+  <div class="tipicon"><img class="sorticon" src="assets/10.png" alt="dark"></div>
+  <div class="tipcaption">Use a regular detergent and cold water to prevent shrinkage or damage to the fibers. Wash the clothes on a normal cycle.
   </div>
+  <div class="tag"><div id="tag-text"> <10°C </div><div id="tag-text">regular</div><div id="tag-text">normal cycle</div></div>
 </div>
 
+
 <div class="tip" id="tip6">
-  <div class="tipicon"><img class="sorticon" src="assets/dryericon.png" alt="dark"></div>
-  <div class="tipcaption">No dryer.
+  <div class="tipicon"><img class="sorticon" src="assets/30.png" alt="dark"></div>
+  <div class="tipcaption">Use a mild detergent and warm water to prevent damage to the fibers. Wash the clothes on a gentle cycle or hand wash them.
   </div>
+  <div class="tag"><div id="tag-text"> 30°C </div><div id="tag-text">mild</div><div id="tag-text">gentle cycle</div></div>
+</div>
+
+<div class="tip" id="tip7">
+  <div class="tipicon"><img class="sorticon" src="assets/HANG.png" alt="dark"></div>
+  <div class="tipcaption">Hang the clothing to air dry, or tumble dry on medium heat with dryer.
+  </div>
+  <div class="tag"><div id="tag-text"> 60°C </div><div id="tag-text">air</div><div id="tag-text">medium</div></div>
+</div>
+
+
+<div class="tip" id="tip8">
+  <div class="tipicon"><img class="sorticon" src="assets/HEAVY.png" alt="dark"></div>
+  <div class="tipcaption">Use heavy-duty cycle to to help fluff them up and remove any wrinkles. it is recommended to use a low heat setting.
+  </div>
+  <div class="tag"><div id="tag-text"> 50°C </div><div id="tag-text">heavy-duty</div><div id="tag-text">low</div></div>
 </div>
 
 

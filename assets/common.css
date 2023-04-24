@@ -6,6 +6,8 @@ html {
 body {
     min-height: 100%;
     background-color: #f5f5f5;
+    cursor: url('/Users/sandra/Desktop/typography/capstone/assets/cursor.png'), auto;
+
 }
 
 
@@ -419,7 +421,7 @@ width:15vw;
 
   border-radius:10px;
   min-height:10vh;
-  background-color:#EDEDED;
+  background-color:#dcdcdc;
 
 
   font-size:12px;
@@ -444,13 +446,13 @@ width:15vw;
   padding-right:15px;
   padding-left:0px;
   line-height: 200%;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 
 input{
   border:none;
-  border-bottom:1.5px solid #cecece;
+  border-bottom:1.5px solid #979797;
   background-color:#ededed00;
   width:10vw;
 
@@ -461,15 +463,15 @@ input{
 
 .enter{
   height:5vh;
-  padding-bottom:5px;
+  padding-bottom:10px;
   padding-top:5px;
  
   position: relative;
   right:0;
   bottom:0;
-  opacity:50%;
-  filter: drop-shadow(1px 1px 1px #464646);
-  color:#EDEDED;
+  opacity:70%;
+  filter: drop-shadow(1px 1px 2px #242424);
+  color:#ffffff;
   
 }
 
@@ -483,8 +485,11 @@ input{
   display:none;
   flex-direction: row;
   align-items: center;
+  height:fit-content;
 
-
+  padding-top:15px;
+  padding-bottom:15px;
+  min-height:15vh;
   border-radius:10px;
   background-color:#6A6A6A;
   margin-top:2vh;
@@ -503,12 +508,12 @@ input{
   font-size:12px;
   font-weight:400;
   letter-spacing: 0.3px;
-  padding-left:8px;
-  padding-right:8px;
+  padding-left:5px;
+  padding-right:10px;
   
   line-height: 110%;
 
-  text-align: center;
+  text-align: left;
 
 }
 
@@ -542,16 +547,14 @@ form{
 #color-option-coat,
 #color-option-sweater{
   border:none;
-  border-bottom:1.5px solid #cecece;
+  border-bottom:1.5px solid #979797;
   background-color:#ededed00;
-  width:14vw;
+  width:80px;
   font-family: "roboto slab";
   font-size:11px;
 }
 
-#color-option-sweater{
-  width:8vw;
-}
+
 
 .washer{
   position: fixed;
@@ -581,10 +584,33 @@ form{
 
 }
 
+.tag{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  margin-right:3px;
+
+  font-size:10px;
+  color: rgb(255, 255, 255);
+  
+}
+
+#tag-text{
+  display:flex;
+  margin:3px;
+  align-items: center;
+  padding:3px;
+  padding-left:5px;
+  padding-right:5px;
+  
 
 
+  height:20px;
+  border-radius: 5px;
+  border: solid 1px rgb(255, 255, 255);
 
-
+}
 
 
 
@@ -663,6 +689,8 @@ form{
   .tip{
     
     width:10vw;
+
+    height:fit-content;
     margin-top:0;
     margin-left:2vw;
     padding-left:10px;
@@ -776,7 +804,7 @@ section{
 
   border-radius:10px;
   min-height:10vh;
-  background-color:#EDEDED;
+  background-color:#dcdcdc;
 
 
   font-size:12px;
@@ -798,8 +826,16 @@ section{
   flex-direction: column;
 
   
-  width:19vw;
-  max-height: 25svh;
+  width:20vw;
+
+
+
+}
+
+.tipcaption{
+  text-align: center;
+  padding-left:3px;
+  padding-right:3px;
 
 
 }
@@ -838,7 +874,14 @@ section{
 
 
 .material{
+  display:flex;
+  flex-direction: column;
 
+  padding:20px;
+  padding-right:15px;
+  
+  line-height: 200%;
+  align-items: flex-end;
   padding-left:20px;
 
 }
@@ -862,6 +905,27 @@ section{
   padding-bottom:10px;
 
 }
+
+
+.tag{
+  flex-direction: row;
+  justify-content: center;
+  width:fit-content;
+  margin-top:20px;
+  flex-wrap:wrap;
+
+}
+
+#tag-text{
+  display:flex;
+  align-items: center;
+  padding-left:5px;
+  padding-right:5px;
+
+  height:20px;
+  border-radius: 5px;
+
+}
 }
 
 
@@ -880,4 +944,6 @@ section{
   }
 
 }
+
+
 

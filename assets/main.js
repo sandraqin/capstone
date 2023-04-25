@@ -1,8 +1,3 @@
-window.stateCallback = () => {
-	console.log('Something changed!')
-}
-
-
 
 function dropMenu() {
     document.getElementById("clothesMenu").classList.toggle("show");
@@ -14,20 +9,22 @@ window.onclick = function(event) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+        var openDrop = dropdowns[i];
+        if (openDrop.classList.contains('show')) {
+          openDrop.classList.remove('show');
         }
       }
     }
 }
 
-window.stateCallback = () => {
-  let selectElement = document.querySelector('[name="some-option"]');
-  console.log(selectElement.value);
-}
 
 var tipDiv = document.querySelectorAll('#tip1, #tip2, #tip3, #tip4, #tip5, #tip6, #tip7, #tip8');
+var iconColor = document.getElementById("st1");
+var pantColor = document.getElementById("pant1");
+var coatColor = document.getElementById("coat1");
+var sweaterColor = document.getElementById("sweater0");
+
+const whiteDefault = "#FFFFFF";
 
 
 function showDivshirt() {
@@ -36,9 +33,13 @@ function showDivshirt() {
   document.getElementById('pants').style.display = "none";
   document.getElementById('coat').style.display = "none";
   document.getElementById('sweater').style.display = "none";
+  document.getElementById("shirt-form").reset();
+  iconColor.style.fill = whiteDefault;
+
   
-  for (var i = 0; i < tipDiv.length; i++) {
-    tipDiv[i].style.display = 'none';}
+  tipDiv.forEach(function (div) {
+      div.style.display = 'none';
+    });
 
 }
 
@@ -48,6 +49,8 @@ function showDivpants() {
   document.getElementById('shirt').style.display = "none";
   document.getElementById('coat').style.display = "none";
   document.getElementById('sweater').style.display = "none";
+  document.getElementById("pants-form").reset();
+  pantColor.style.fill = whiteDefault;
   
   for (var i = 0; i < tipDiv.length; i++) {
     tipDiv[i].style.display = 'none';}
@@ -58,9 +61,12 @@ function showDivcoat() {
   document.getElementById('pants').style.display = "none";
   document.getElementById('shirt').style.display = "none";
   document.getElementById('sweater').style.display = "none";
+  document.getElementById("coat-form").reset();
+  coatColor.style.fill = whiteDefault;
   
-  for (var i = 0; i < tipDiv.length; i++) {
-    tipDiv[i].style.display = 'none';}
+  tipDiv.forEach(function (div) {
+    div.style.display = 'none';
+  });
 }
 
 
@@ -70,9 +76,12 @@ function showDivsweater() {
   document.getElementById('coat').style.display = "none";
   document.getElementById('pants').style.display = "none";
   document.getElementById('shirt').style.display = "none";
+  document.getElementById("sweater-form").reset();
+  sweaterColor.style.fill = whiteDefault;
   
-  for (var i = 0; i < tipDiv.length; i++) {
-    tipDiv[i].style.display = 'none';}
+  tipDiv.forEach(function (div) {
+    div.style.display = 'none';
+  });
 }
 
 
@@ -518,7 +527,7 @@ function showDivwash() {
   var washpicDiv = document.getElementById('washerpic');
   var sortpicDiv = document.getElementById('bucketpic');
   var drypicDiv = document.getElementById('dryerpic');
-  var tipDiv = document.querySelectorAll('#tip1, #tip2, #tip3, #tip4, #tip5, #tip6');
+  var tipDiv = document.querySelectorAll('#tip1, #tip2, #tip3, #tip4, #tip5, #tip6,#tip7,#tip8');
 
 
   if(midDiv.style.display === 'none'){
@@ -570,7 +579,7 @@ function showDivdry() {
   var washpicDiv = document.getElementById('washerpic');
   var sortpicDiv = document.getElementById('bucketpic');
   var drypicDiv = document.getElementById('dryerpic');
-  var tipDiv = document.querySelectorAll('#tip1, #tip2, #tip3, #tip4, #tip5, #tip6');
+  var tipDiv = document.querySelectorAll('#tip1, #tip2, #tip3, #tip4, #tip5, #tip6,#tip7,#tip8');
 
 
   if (lastDiv.style.display === 'none') {
@@ -616,7 +625,7 @@ function showDivhome() {
   var washpicDiv = document.getElementById('washerpic');
   var sortpicDiv = document.getElementById('bucketpic');
   var drypicDiv = document.getElementById('dryerpic');
-  var tipDiv = document.querySelectorAll('#tip1, #tip2, #tip3, #tip4, #tip5, #tip6');
+  var tipDiv = document.querySelectorAll('#tip1, #tip2, #tip3, #tip4, #tip5, #tip6,#tip7,#tip8');
 
 
 

@@ -10,6 +10,11 @@ body {
 
 }
 
+@font-face {
+  font-family: "roboto slab";
+  src: url(assets/RobotoSlab-Regular.ttf;
+}
+
 :root {
     --base: 16px;
     --heading: calc(var(--base) * 2);

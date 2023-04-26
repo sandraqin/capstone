@@ -143,7 +143,7 @@ pantsSubmitButton.addEventListener('click', function() {
   
     
   } else if (document.getElementById('midb').style.display !== "none") {
-    showWash();
+    showpantsWash();
     setTimeout(function() {
       rotateWash.classList.add('animate');
       setTimeout(function() {
@@ -175,7 +175,7 @@ coatSubmitButton.addEventListener('click', function() {
 
 
   } else if (document.getElementById('midb').style.display !== "none") {
-    showWash();
+    showcoatWash();
     setTimeout(function() {
       rotateWash.classList.add('animate');
       setTimeout(function() {
@@ -207,7 +207,7 @@ sweaterSubmitButton.addEventListener('click', function() {
 
 
   } else if (document.getElementById('midb').style.display !== "none") {
-    showWash();
+    showsweaterWash();
     setTimeout(function() {
       rotateWash.classList.add('animate');
       setTimeout(function() {
@@ -406,7 +406,7 @@ function showsweaterSort() {
   
 }
 
-
+/*why it doesn't work in github
 
 function showWash() {
   var cottonInputs = document.querySelectorAll("#cotton-shirt, #cotton-pants, #cotton-coat, #cotton-sweater");
@@ -479,10 +479,300 @@ function showWash() {
       document.getElementById('tip8').style.display = "none";   
     }
   }
+}*/
+
+
+
+function showWash() {
+  var cottonInputs = document.getElementById("cotton-shirt");
+  var polyInputs = document.getElementById
+  ("poly-shirt");
+  var acrylicInputs = document.getElementById("acrylic-shirt");
+  if (cottonInputs.value < 20 && cottonInputs.value > 0 && cottonInputs.value !== "") {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";
+      return; 
+    } else if (cottonInputs.value > 19 && cottonInputs.value < 100) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+      return true;
+
+  }else if (cottonInputs.value > 99 && cottonInputs.value <101) {
+    document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "flex";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+  }
+
+
+  if (polyInputs.value > 40 && polyInputs.value < 80 ) {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";  }
+    
+    else if (polyInputs.value > 80)  {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+    }
+
+
+    if (acrylicInputs.value > 50) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "flex";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+  }
 }
 
 
+function showpantsWash() {
+  var cottonInputs = document.getElementById("cotton-pants");
+  var polyInputs = document.getElementById
+  ("poly-pants");
+  var acrylicInputs = document.getElementById("acrylic-pants");
+  if (cottonInputs.value < 20 && cottonInputs.value > 0 && cottonInputs.value !== "") {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";
+      return; 
+    } else if (cottonInputs.value > 19 && cottonInputs.value < 100) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+      return true;
 
+  }else if (cottonInputs.value > 99 && cottonInputs.value <101) {
+    document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "flex";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+  }
+
+
+  if (polyInputs.value > 40 && polyInputs.value < 80 ) {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";  }
+    
+    else if (polyInputs.value > 80)  {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+    }
+
+
+    if (acrylicInputs.value > 50) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "flex";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+  }
+}
+
+
+function showcoatWash() {
+  var cottonInputs = document.getElementById("cotton-coat");
+  var polyInputs = document.getElementById
+  ("poly-coat");
+  var acrylicInputs = document.getElementById("acrylic-coat");
+  if (cottonInputs.value < 20 && cottonInputs.value > 0 && cottonInputs.value !== "") {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";
+      return; 
+    } else if (cottonInputs.value > 19 && cottonInputs.value < 100) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+      return true;
+
+  }else if (cottonInputs.value > 99 && cottonInputs.value <101) {
+    document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "flex";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+  }
+
+
+  if (polyInputs.value > 40 && polyInputs.value < 80 ) {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";  }
+    
+    else if (polyInputs.value > 80)  {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+    }
+
+
+    if (acrylicInputs.value > 50) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "flex";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+  }
+}
+
+
+function showsweaterWash() {
+  var cottonInputs = document.getElementById("cotton-sweater");
+  var polyInputs = document.getElementById
+  ("poly-sweater");
+  var acrylicInputs = document.getElementById("acrylic-sweater");
+  if (cottonInputs.value < 20 && cottonInputs.value > 0 && cottonInputs.value !== "") {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";
+      return; 
+    } else if (cottonInputs.value > 19 && cottonInputs.value < 100) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+      return true;
+
+  }else if (cottonInputs.value > 99 && cottonInputs.value <101) {
+    document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "flex";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";
+  }
+
+
+  if (polyInputs.value > 40 && polyInputs.value < 80 ) {
+    document.getElementById('tip1').style.display = "none";
+    document.getElementById('tip2').style.display = "none";
+    document.getElementById('tip3').style.display = "flex";
+    document.getElementById('tip4').style.display = "none";
+    document.getElementById('tip5').style.display = "none";
+    document.getElementById('tip6').style.display = "none";
+    document.getElementById('tip7').style.display = "none";
+    document.getElementById('tip8').style.display = "none";  }
+    
+    else if (polyInputs.value > 80)  {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "flex";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "none";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+    }
+
+
+    if (acrylicInputs.value > 50) {
+      document.getElementById('tip1').style.display = "none";
+      document.getElementById('tip2').style.display = "none";
+      document.getElementById('tip3').style.display = "none";
+      document.getElementById('tip4').style.display = "none";
+      document.getElementById('tip5').style.display = "none";
+      document.getElementById('tip6').style.display = "flex";
+      document.getElementById('tip7').style.display = "none";
+      document.getElementById('tip8').style.display = "none";  
+  }
+}
 
 
 

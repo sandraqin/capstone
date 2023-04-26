@@ -413,7 +413,7 @@ function showWash() {
   var polyInputs = document.querySelectorAll("#poly-shirt, #poly-pants, #poly-coat, #poly-sweater");
   var acrylicInputs = document.querySelectorAll("#acrylic-shirt, #acrylic-pants, #acrylic-coat, #acrylic-sweater");
   for (var i = 0; i < cottonInputs.length; i++){
-    if (cottonInputs[i].value < 20 && cottonInputs[i].value > 0) {
+    if (cottonInputs[i].value < 20 && cottonInputs[i].value > 0 && cottonInputs[i].value !== "") {
       document.getElementById('tip1').style.display = "none";
       document.getElementById('tip2').style.display = "none";
       document.getElementById('tip3').style.display = "flex";

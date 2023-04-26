@@ -10,7 +10,6 @@ body {
 
 }
 
-
 :root {
     --base: 16px;
     --heading: calc(var(--base) * 2);
@@ -60,7 +59,7 @@ a{
     min-width:70vw;
 
 
-    font-size: 16px;
+    font-size: 20px;
     font-family: "roboto slab";
     border-radius: 10px;
     border: none;
@@ -110,6 +109,7 @@ a{
     padding-top:8px;
     padding-bottom:8px;
     align-items: flex-start;
+    font-size: 18px;
 
     margin-top:-1px;
   }
@@ -231,19 +231,19 @@ a{
 
 .icon{
 padding:15px;
-
-width:15vw;
+width:70px;
 }
 
 .icon2{
  padding-left:20px;
-
- width:10vw;
+ padding-right:10px;
+ width:35px;
 }
 
 .icon3{
-  padding-left:20px;
-  width:15vw;
+  padding-left:10px;
+  padding-right:10px;
+  width:60px;
  }
 
 
@@ -487,8 +487,9 @@ input{
   align-items: center;
   height:fit-content;
 
-  padding-top:15px;
-  padding-bottom:15px;
+
+  padding-top:5px;
+  padding-bottom:5px;
   min-height:15vh;
   border-radius:10px;
   background-color:#6A6A6A;
@@ -590,6 +591,7 @@ form{
   align-items: flex-end;
 
   margin-right:3px;
+  padding:3px;
 
   font-size:10px;
   color: rgb(255, 255, 255);
@@ -713,7 +715,7 @@ form{
 
   #color-option-shirt,
   #color-option-pants,
-  #color-option-coat{
+  #color-option-coat, #color-option-sweater{
     width:10vw;
   }
 
@@ -834,8 +836,8 @@ section{
 
 .tipcaption{
   text-align: center;
-  padding-left:3px;
-  padding-right:3px;
+  padding-left:8px;
+  padding-right:8px;
 
 
 }
@@ -888,19 +890,19 @@ section{
 
 
 .icon{
-  width:10vw;
+  width:7vw;
   padding-top:30px;
   padding-bottom:0;
 }
 
 .icon2{
-  width:5vw;
+  width:50px;
   padding:30px;
   padding-bottom:10px;
 }
 
 .icon3{
-  width:8vw;
+  width:65px;
   padding:30px;
   padding-bottom:10px;
 
